@@ -92,6 +92,10 @@ body {
     border-radius: 5px;
     border: 2px solid rgb(61, 72, 86);
     box-shadow: 0 0 10px rgb(129, 140, 154);
+    text-align: right;
+    color:rgb(61, 72, 86);
+    font-size: 52px;
+    padding: 0 15px;
 }
 
 .buttons {
