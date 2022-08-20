@@ -1,0 +1,130 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+   clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+ background: #bbfa9c;
+ background-image: linear-gradient(to top left, rgb(0, 221, 255), rgb(251, 244, 39));
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ font-family: 'Inter', sans-serif;
+ font-size: 26px;
+}
+
+.title {
+    padding-right: 80px;
+    font-size: 42px;
+    font-family: 'Shadows Into Light', cursive;
+    letter-spacing: 5px;
+    line-height: 100px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgb(111, 135, 163);
+}
+
+.span3 {
+    width: 74%;
+    border-radius: 6%;
+    background: rgb(117, 194, 130);
+    color: #f0f0f0;
+}
+
+.square {
+    border-radius: 10%;
+    background: #9fa0a2;
+    color: #f0f0f0;
+    font-size: 24px
+}
+
+.clear {
+    background: rgb(238, 110, 110)
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.calculator {
+    background: rgb(16, 47, 83);
+    background-image: linear-gradient( rgb(85, 159, 158), rgb(61, 72, 86));
+    border: 2px solid rgb(61, 72, 86);
+    box-shadow: 0 0 14px rgb(61, 72, 86);
+    height: 515px;
+    width: 325px;
+    border-radius: 8px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 22px;
+}
+
+.output {
+    width: 100%;
+    height: 30%;
+    background: #fff;
+    opacity: .95;
+    border-radius: 3%;
+    border: 2px solid rgb(61, 72, 86);
+    box-shadow: 0 0 10px rgb(129, 140, 154);
+}
+
+.buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    height: 70%;
+    width: 100%;
+    padding: 15px 0 0 0;
+}
+
+button {
+    width: 23%;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid rgba(61, 72, 86, .7);
+    opacity: .95;
+    cursor: pointer;
+    box-shadow: 0 1px rgba(200, 243, 249, 0.7);
+    background: #fff;
+    color: rgb(61, 72, 86);
+}
+
+button:hover {
+    border: 0.5px solid #f0f0f0;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 0;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
