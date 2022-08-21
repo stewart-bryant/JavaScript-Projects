@@ -42,24 +42,6 @@ body {
     text-shadow: 2px 2px 8px rgb(111, 135, 163);
 }
 
-.span3 {
-    width: 74%;
-    border-radius: 6%;
-    background: rgb(117, 194, 130);
-    color: #f0f0f0;
-}
-
-.square {
-    border-radius: 10%;
-    background: #9fa0a2;
-    color: #f0f0f0;
-    font-size: 24px
-}
-
-.clear {
-    background: rgb(238, 110, 110)
-}
-
 /******************************************
 /* LAYOUT
 /*******************************************/
@@ -107,6 +89,11 @@ body {
     padding: 15px 0 0 0;
 }
 
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
 button {
     width: 23%;
     height: 44px;
@@ -120,7 +107,7 @@ button {
 }
 
 button:hover {
-    border: 0.5px solid #f0f0f0;
+    background: rgb(195, 237, 240);
 }
 
 button:active {
@@ -128,7 +115,32 @@ button:active {
     box-shadow: 0 0;
 }
 
+.span3 {
+    width: 74%;
+    border-radius: 6%;
+    background: rgb(94, 201, 112);
+    color: #fff;
+}
 
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+.span3:hover { 
+    background: rgb(53, 176, 73);
+}
+
+.square {
+    border-radius: 10%;
+    background: #9fa0a2;
+    color: #fff;
+    font-size: 24px;
+}
+
+.square:hover {
+    background: #7c7c7d;
+}
+
+.clear {
+    background: rgb(238, 110, 110);
+}
+
+.clear:hover {
+    background: rgb(235, 69, 69);
+}
