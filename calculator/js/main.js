@@ -77,8 +77,15 @@ const allClearButton = document.querySelector('[data-all-clear]');
 const oppositeButton = document.querySelector('[data-opposite]');
 const previousOperandTextElement = document.querySelector('[data-previous-operand]');
 const currentOperandTextElement = document.querySelector('[data-current-operand]');
-const leftParenthesesButton = document.querySelector('[data-left-parentheses]');
-const rightParenthesesButton = document.querySelector('[data-right-parentheses]');
+
+// // const squareButton = document.querySelector('[data-square]');
+// // const squareRootButton = document.querySelector('[data-sqaure-root]');
+// case 'x²': 
+// computation = Math.pow(current, 2);
+// break;
+// case '²√': 
+// computation = Math.sqrt(current);
+// break;
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
 
