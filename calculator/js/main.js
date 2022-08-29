@@ -19,6 +19,20 @@ class Calculator {
         this.currentOperand = -this.currentOperand;
         this.updateDisplay();
     }
+    
+    squareValue(number) {
+        this.currentOperand = Math.pow(this.currentOperand, 2);
+        this.previousOperand = this.currentOperand;
+        this.currentOperandTextElement.innerText = this.currentOperand;
+        this.previousOperandTextElement.innerText = 'sqr('+Math.sqrt(this.previousOperand)+')';
+    }
+
+    squareRootValue(number) {
+        this.currentOperand = Math.sqrt(this.currentOperand);
+        this.previousOperand = this.currentOperand;
+        this.currentOperandTextElement.innerText = this.currentOperand;
+        this.previousOperandTextElement.innerText = '√('+Math.pow(this.currentOperand, 2)+')';
+    }
 
     appendNumber(number) {
         if (number === '.' && this.currentOperand.includes('.')) return;
@@ -58,14 +72,12 @@ class Calculator {
         }
         this.currentOperand = computation;
         this.operation = undefined;
-        this.previousOperand = '';
     }
 
     updateDisplay() {
         this.currentOperandTextElement.innerText = this.currentOperand;
         this.previousOperandTextElement.innerText = this.previousOperand;
     }
-
 
 }
 
@@ -75,6 +87,8 @@ const equalsButton = document.querySelector('[data-equals]');
 const deleteButton = document.querySelector('[data-delete]');
 const allClearButton = document.querySelector('[data-all-clear]');
 const oppositeButton = document.querySelector('[data-opposite]');
+const squareButton = document.querySelector('[data-square]');
+const squareRootButton = document.querySelector('[data-square-root]');
 const previousOperandTextElement = document.querySelector('[data-previous-operand]');
 const currentOperandTextElement = document.querySelector('[data-current-operand]');
 
@@ -119,8 +133,15 @@ deleteButton.addEventListener('click', button => {
 })
 
 oppositeButton.addEventListener('click', button => {
-    calculator.oppositeValue(); 
-    calculator.updateDisplay();
+    calculator.oppositeValue();
+})
+
+squareButton.addEventListener('click', button => {
+    calculator.squareValue();
+})
+
+squareRootButton.addEventListener('click', button => {
+    calculator.squareRootValue();
 })
 
 /*const calculator = {
